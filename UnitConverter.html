@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unit Converter</title>
+    
+        <style>
+        body {
+            font-family: Garamond, serif;
+            background-color: #dfead9;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            color: #234d20;
+        }
+
+        input {
+            width: 200px;
+            padding: 10px;
+            margin: 15px;
+        }
+
+        button {
+            width: 180px;
+            padding: 10px;
+            margin: 8px;
+            border: none;
+            border-radius: 10px;
+            background: #4f7942;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3d6133;
+        }
+
+        #result {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        </style>
+        
+        <script>
+        function convert(type) {
+            let value = parseFloat(document.getElementById('inputValue').value);
+            let result = 0;
+            let output = '';
+
+            if (isNaN(value)) {
+                document.getElementById('result').innerHTML = 'Please enter a number';
+                return;
+            }
+
+            switch(type) {
+                case 'cmToM':
+                    result = value / 100;
+                    output = result + ' metre';
+                    break;
+
+                case 'mToCm':
+                    result = value * 100;
+                    output = result + ' cm';
+                    break;
+
+                case 'mToKm':
+                    result = value / 1000;
+                    output = result + ' km';
+                    break;
+
+                case 'kmToM':
+                    result = value * 1000;
+                    output = result + ' metre';
+                    break;
+            }
+            
+            document.getElementById('result').innerHTML = output;
+        }
+        </script>
+    </head>
+
+    <body>
+        
+        <div class="container">
+        <h1>Unit Converter</h1>
+
+        <input type="number" id="inputValue" placeholder="Enter value">
+        <br>
+
+        <button onclick="convert('cmToM')">CM to Metre</button>
+        <button onclick="convert('mToCm')">Metre to CM</button>
+        <button onclick="convert('mToKm')">Metre to KM</button>
+        <button onclick="convert('kmToM')">KM to Metre</button>
+
+        <p id="result"></p>
+
+        <button onclick="location.href='main.html'">Back
+        </button>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Gallery</title>
+        
+        <style>
+        body {
+            background: url('background2.jpg');
+            font-family: Garamond, serif;
+            background-color: #dfead9;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #234d20;
+            margin-bottom: 20px;
+        }
+
+        .gallery-box {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            width: 85%;
+            margin: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        button {
+            width: 220px;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #4f7942;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #3d6133;
+        }
+        </style>
+    </head>
+    
+    <body>
+
+        <h1>⊹₊⟡⋆My Galleryᯓ★ˎˊ˗</h1>
+
+        <div class="gallery-box">
+
+            <div class="gallery">
+            <img src="photo1.jpg" alt="Photo 1">
+            <img src="photo2.jpg" alt="Photo 2">
+            <img src="photo3.jpg" alt="Photo 3">
+            <img src="photo4.jpg" alt="Photo 4">
+            <img src="photo5.jpg" alt="Photo 5">
+            </div>
+
+        </div>
+
+        <button onclick="goToMain()">Back To Personal Info
+        </button>
+
+        <script>
+        function goToMain() {
+            window.location.href = "PersonalInfo.html";
+        }
+        </script>
+
+    </body>
+</html>

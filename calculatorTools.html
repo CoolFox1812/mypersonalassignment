@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator Tools</title>
+            
+        <style>
+        body {
+            font-family: Garamond, serif;
+            background-color: #dfead9;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            background: white;
+            width: 450px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #234d20;
+        }
+
+        input {
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            width: 180px;
+            padding: 10px;
+            margin: 8px;
+            border: none;
+            border-radius: 10px;
+            background: #4f7942;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3d6133;
+        }
+
+        #result {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        </style>
+
+    <body>
+        <script>
+        function calculate(type) {
+        let num1 = parseFloat(document.getElementById('num1').value);
+        let num2 = parseFloat(document.getElementById('num2').value);
+        let result;
+
+        if (isNaN(num1) || isNaN(num2)) {
+            document.getElementById('result').innerHTML =
+            'Please enter both numbers';
+            return;
+        }
+
+        switch(type) {
+            case 'add':
+                result = num1 + num2;
+                break;
+
+            case 'subtract':
+                result = num1 - num2;
+                break;
+
+            case 'multiply':
+                result = num1 * num2;
+                break;
+
+            case 'divide':
+                result = num1 / num2;
+                break;
+        }
+        
+        document.getElementById('result').innerHTML =
+        'Result: ' + result;
+        }
+        </script>
+    </head>
+
+        <div class="container">
+            <h1>Calculator Tools</h1>
+
+            <input type="number" id="num1" placeholder="Enter first number">
+            <br>
+
+            <input type="number" id="num2" placeholder="Enter second number">
+            <br>
+
+            <button onclick="calculate('add')">Addition (+)</button>
+            <button onclick="calculate('subtract')">Subtract (-)</button>
+            <button onclick="calculate('multiply')">Multiply (×)</button>
+            <button onclick="calculate('divide')">Division (÷)</button>
+
+            <p id="result"></p>
+
+            <button onclick="location.href='main.html'">Back
+            </button>
+        </div>
+
+    </body>
+</html>

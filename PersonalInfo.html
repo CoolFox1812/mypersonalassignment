@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Info</title>
+        
+        <style>
+        body {
+            background: url('background2.jpg');
+            font-family: Garamond, serif;
+            background-color: #dfead9;
+            padding: 30px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .box {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 1000px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            color: #234d20;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .images img {
+            width: 350px;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        button {
+            width: 220px;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #4f7942;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #3d6133;
+        }
+        </style>
+        </head>
+        <body>
+
+        <div class="container">
+            
+            <h1>°❀⋆.ೃ࿔*:･°My Personal Information❀⋆.ೃ࿔*:･</h1>
+            
+            <div class="box">
+                <h2>Nice to meet you!</h2>
+                <p><b>Name:</b> Adlina Maisarah binti Zaini</p>
+                <p><b>Matric Number:</b> A25DW0231</p>
+                <p><b>Course:</b> Diploma in Computer Science</p>
+                <p><b>Email:</b> 1812.adlinamaisarah@gmail.com</p>
+
+                 <button onclick="location.href='cv.html'">View My CV
+                </button>
+
+                <br>
+
+                <a href="myCV.pdf" download>
+                    <button>Download CV (PDF)</button>
+                </a>
+            </div>
+
+            <br><br>
+
+            <div class="box">
+                <h2>My Interests ♬⋆.˚</h2>
+                <p>Listening to music</p>
+                <p>Watching movies</p>
+
+            <div class="images">
+                <img src="interest1.jpg" alt="Interest 1">
+                <img src="interest2.jpg" alt="Interest 2">
+                <img src="interest3.jpg" alt="Interest 3">
+            </div>
+        </div>
+        
+        <button onclick="goToGallery()">My Gallery
+        </button>
+
+        <button onclick="goToMain()">Back To Main Page
+        </button>
+
+        </div>
+        <script>
+
+        function goToGallery() {
+            window.location.href = "gallery.html";
+        }
+
+        function goToMain() {
+            window.location.href = "main.html";
+        }
+        </script>
+
+        </body>
+</html>

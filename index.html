@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Garamond, serif;
+        }
+
+        body {
+            background: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: #234d20;
+            margin-bottom: 25px;
+            font-family:"New Century Schoolbook", Tex Gyre Schola, serif;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        button {
+            width: 220px;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background-color: #4f7942;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #3d6133;
+        }
+    </style>
+</head>
+<body>
+
+        <h1>Welcome to My System</h1>
+    <div class ="container">
+        <div class="button-group">
+            <button onclick="location.href='personalInfo.html'">
+                Personal Info
+            </button>
+
+            <button onclick="location.href='calculatorTools.html'">
+                Calculator Tools
+            </button>
+
+            <button onclick="location.href='bmi.html'">
+                BMI Calculator
+            </button>
+
+            <button onclick="location.href='tax.html'">
+                Tax Calculator
+            </button>
+
+            <button onclick="location.href='unitConverter.html'">
+                Unit Converter
+            </button>
+        </div>
+    </div>
+</body>
+</html>
+
